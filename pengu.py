@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import streamlit pandas as sp
 
 
 @st.cache_data
@@ -11,6 +12,6 @@ url = 'https://raw.githubusercontent.com/Beyza0000/byz/refs/heads/main/penguins_
 df = load_data()
 
 st.write(df)
-
-st.header("Result")
+all_widgets= sp.create_widgetds(df)
+res= sp.filter_df(df, all_widgets)
 st.write(res)
