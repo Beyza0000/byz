@@ -15,8 +15,8 @@ if uploaded_file:
     st.write(filtered_df)
 
 st.subheader("gorsellestırme:")
-x_column = st.selectbox("x ekseni için")
-y_column = st.selectbox("y ekseni icin")
+x_column = st.selectbox("x ekseni için", columns)
+y_column = st.selectbox("y ekseni icin", columns)
 button= st.button("gorsellestr")
 if button:
   st.line_chart(df,x=x_column, y=y_column)
