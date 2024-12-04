@@ -7,7 +7,7 @@ def load_data():
     df = pd.read_csv(file)
     return df
 
-file = "../data/titanic.csv"
+file = "titanic.csv"
 df = load_data()
 create_data = {"Name": "text",
                 "Sex": "multiselect",
