@@ -13,5 +13,12 @@ if uploaded_file:
   if selected_column and filter_value:
     filtered_df = df[df[selected_column].astype(str) == filter_value]
     st.write(filtered_df)
+
+st.subheader("gorsellestırme:")
+x_column = st.selectbox("x ekseni için")
+y_column = st.selectbox("y ekseni icin")
+button= st.button("gorsellestr")
+if button:
+  st.line_chart(df,x=x_column, y=y_column)
   
   
