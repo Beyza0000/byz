@@ -5,7 +5,8 @@ uploaded_file = st.file_uploader(" dosyanızı giriniz")
 if uploaded_file:
   df = pd.read_csv(uploaded_file)
   st.subheader("Veri Dosyanız: ")
-  st.write(df.head())
+  #st.write(df.head())
+  df
   st.subheader("filter: ")
   columns= df.columns.tolist()
   selected_column= st.selectbox("kolon", columns)
